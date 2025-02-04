@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="form-container">
         <h2>Contact Us</h2>
         <form action="">
+          <div class="row">
             <label for="name">Name:</label>
-            <br>
-            <input type="text" id="name" name="name">
-            <br>
-            <br>
+            <input type="text" id="name" name="name" />
+          </div>
+          <div class="row">
             <label for="email">Email:</label>
-            <br>
-            <input type="email" id="email" name="email">
-            <br>
-            <br>
+            <input type="email" id="email" name="email" />
+          </div>
+          <div class="row">
             <label for="phone">Phone Number:</label>
-            <br>
-            <input type="tel" id="phone" name="phone">
-            <br>
-            <br>
+            <input type="tel" id="phone" name="phone" />
+          </div>
+          <div class="row">
             <label for="message">Message:</label>
-            <br>
             <textarea id="message" name="message"></textarea>
-            <br>
-            <br>
+          </div>
+          <div class="row">
             <button type="submit">Submit</button>
+          </div>
         </form>
+      </div>
     </main>
-</body>
+  </body>
 </html>
