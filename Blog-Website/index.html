@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Awesome Blog App</title>
+    <title>Blogify</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <h1>My Awesome Blog App</h1>
+      <a href="./" id="header-logo">Blogify</a>
       <nav>
         <a href="#">Home</a>
         <a href="#">About</a>
@@ -15,110 +16,130 @@
       </nav>
     </header>
     <main>
-      <section>
-        <article>
-          <h2>React Fiber and Reconciliation: A Deep Dive</h2>
+      <section id="blog-posts-container">
+        <article class="blog-post">
           <img
             src="./images/article-1.png"
             alt="React Fiber and Reconciliation: A Deep Dive"
             width="450"
+            class="blog-banner-img"
           />
-          <p>
-            React Fiber is a complete rewrite of the React core, which is
-            designed to improve the overall performance of React applications.
-            In this article, we will take a deep dive into React Fiber and
-            understand how it works under the hood.
-          </p>
-          <h2>Key Points:</h2>
-          <ul>
-            <li>React Fiber is a complete rewrite of the React core.</li>
-            <li>
-              It is designed to improve the overall performance of React
-              applications.
-            </li>
-            <li>
-              React Fiber introduces a new reconciliation algorithm that allows
-              React to pause and resume the rendering process.
-            </li>
-            <li>
-              React Fiber is still in development and is not yet stable for
-              production use.
-            </li>
-          </ul>
+          <div class="blog-content">
+            <h2 class="blog-title">
+              React Fiber and Reconciliation: A Deep Dive
+            </h2>
+            <p class="blog-text">
+              React Fiber is a complete rewrite of the React core, which is
+              designed to improve the overall performance of React applications.
+              In this article, we will take a deep dive into React Fiber and
+              understand how it works under the hood.
+            </p>
+            <div class="blog-key-points">
+              <h3>Key Points:</h3>
+              <ul>
+                <li>React Fiber is a complete rewrite of the React core.</li>
+                <li>
+                  It is designed to improve the overall performance of React
+                  applications.
+                </li>
+                <li>
+                  React Fiber introduces a new reconciliation algorithm that
+                  allows React to pause and resume the rendering process.
+                </li>
+                <li>
+                  React Fiber is still in development and is not yet stable for
+                  production use.
+                </li>
+              </ul>
+            </div>
+          </div>
         </article>
-        <hr />
-        <article>
-          <h2>The Year 2038 Problem: A Ticking Time Bomb for Computers</h2>
+        <article class="blog-post">
           <img
             src="./images/article-2.png"
             alt="The Year 2038 Problem: A Ticking Time Bomb for Computers"
             width="450"
+            class="blog-banner-img"
           />
-          <p>
-            The Year 2038 problem is a computer science issue that is related to
-            the representation of time in computer systems. In this article, we
-            will explore the Year 2038 problem and understand why it is a
-            ticking time bomb for computers.
-          </p>
-          <h2>Key Points:</h2>
-          <ul>
-            <li>
-              The Year 2038 problem is related to the representation of time in
-              computer systems.
-            </li>
-            <li>
-              It is caused by the use of a 32-bit signed integer to represent
-              time in seconds since the Unix epoch.
-            </li>
-            <li>
-              The Year 2038 problem will occur on January 19, 2038, when the
-              32-bit signed integer overflows and resets to a negative value.
-            </li>
-            <li>
-              The Year 2038 problem can be mitigated by using a 64-bit signed
-              integer to represent time or by using alternative time
-              representations.
-            </li>
-          </ul>
+          <div class="blog-content">
+            <h2 class="blog-title">
+              The Year 2038 Problem: A Ticking Time Bomb for Computers
+            </h2>
+            <p class="blog-text">
+              The Year 2038 problem is a computer science issue that is related
+              to the representation of time in computer systems. In this
+              article, we will explore the Year 2038 problem and understand why
+              it is a ticking time bomb for computers.
+            </p>
+            <div class="blog-key-points">
+              <h3>Key Points:</h3>
+              <ul>
+                <li>
+                  The Year 2038 problem is related to the representation of time
+                  in computer systems.
+                </li>
+                <li>
+                  It is caused by the use of a 32-bit signed integer to
+                  represent time in seconds since the Unix epoch.
+                </li>
+                <li>
+                  The Year 2038 problem will occur on January 19, 2038, when the
+                  32-bit signed integer overflows and resets to a negative
+                  value.
+                </li>
+                <li>
+                  The Year 2038 problem can be mitigated by using a 64-bit
+                  signed integer to represent time or by using alternative time
+                  representations.
+                </li>
+              </ul>
+            </div>
+          </div>
         </article>
-        <hr />
-        <article>
-          <h2>How to Build a Chat Web App: A Beginner’s Guide</h2>
+        <article class="blog-post">
           <img
             src="./images/article-3.png"
             alt="How to Build a Chat Web App: A Beginner’s Guide"
             width="450"
+            class="blog-banner-img"
           />
-          <p>
-            Building a chat web app is a great way to learn web development
-            skills and create a real-world project. In this article, we will
-            provide a step-by-step guide on how to build a chat web app from
-            scratch using HTML, CSS, and JavaScript.
-          </p>
-          <h2>Key Points:</h2>
-          <ul>
-            <li>
+          <div class="blog-content">
+            <h2 class="blog-title">
+              How to Build a Chat Web App: A Beginner’s Guide
+            </h2>
+            <p class="blog-text">
               Building a chat web app is a great way to learn web development
-              skills and create a real-world project.
-            </li>
-            <li>
-              You can build a chat web app from scratch using HTML, CSS, and
-              JavaScript.
-            </li>
-            <li>
-              The key features of a chat web app include real-time messaging,
-              user authentication, and message history.
-            </li>
-            <li>
-              You can enhance your chat web app by adding features like
-              notifications, emojis, and file sharing.
-            </li>
-          </ul>
+              skills and create a real-world project. In this article, we will
+              provide a step-by-step guide on how to build a chat web app from
+              scratch using HTML, CSS, and JavaScript.
+            </p>
+            <div class="blog-key-points">
+              <h3>Key Points:</h3>
+              <ul>
+                <li>
+                  Building a chat web app is a great way to learn web
+                  development skills and create a real-world project.
+                </li>
+                <li>
+                  You can build a chat web app from scratch using HTML, CSS, and
+                  JavaScript.
+                </li>
+                <li>
+                  The key features of a chat web app include real-time
+                  messaging, user authentication, and message history.
+                </li>
+                <li>
+                  You can enhance your chat web app by adding features like
+                  notifications, emojis, and file sharing.
+                </li>
+              </ul>
+            </div>
+          </div>
         </article>
       </section>
     </main>
     <footer>
-      <p>&copy; 2025 My Awesome Blog App</p>
+      <p>&copy; 2025 Blogify</p>
     </footer>
   </body>
 </html>
