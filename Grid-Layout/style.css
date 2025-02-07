@@ -11,7 +11,7 @@ body {
   background-color: #000000;
 }
 
-.grid-layout img {
+.grid-layout .row img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -19,59 +19,43 @@ body {
 }
 
 @media (min-width: 768px) {
-  .grid-layout {
+  .grid-layout .row:nth-child(1n) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
       "img1 img1 img2 img3"
-      "img1 img1 img4 img5"
-      "img6 img7 img8 img8"
-      "img9 img10 img8 img8";
-    gap: 10px;
+      "img1 img1 img4 img5";
   }
 
-  .grid-layout img {
+  .grid-layout .row:nth-child(2n) {
+    grid-template-areas:
+      "img1 img2 img3 img3"
+      "img4 img5 img3 img3";
+  }
+
+  .grid-layout .row img {
     aspect-ratio: 16/9;
+    padding: 5px;
   }
 
-  .grid-layout img:nth-child(1) {
+  .grid-layout .row img:nth-child(1) {
     grid-area: img1;
   }
 
-  .grid-layout img:nth-child(2) {
+  .grid-layout .row img:nth-child(2) {
     grid-area: img2;
   }
 
-  .grid-layout img:nth-child(3) {
+  .grid-layout .row img:nth-child(3) {
     grid-area: img3;
   }
 
-  .grid-layout img:nth-child(4) {
+  .grid-layout .row img:nth-child(4) {
     grid-area: img4;
   }
 
-  .grid-layout img:nth-child(5) {
+  .grid-layout .row img:nth-child(5) {
     grid-area: img5;
-  }
-
-  .grid-layout img:nth-child(6) {
-    grid-area: img6;
-  }
-
-  .grid-layout img:nth-child(7) {
-    grid-area: img7;
-  }
-
-  .grid-layout img:nth-child(8) {
-    grid-area: img8;
-  }
-
-  .grid-layout img:nth-child(9) {
-    grid-area: img9;
-  }
-
-  .grid-layout img:nth-child(10) {
-    grid-area: img10;
   }
 }
