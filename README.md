@@ -1,6 +1,6 @@
 # Cohort Projects Repository
 
-Welcome to my **Cohort Projects Repository**! This repo contains all the projects I will be building during my cohort. These projects focus on building and enhancing web development skills using **HTML** and **CSS**.
+Welcome to my **Cohort Projects Repository**! This repo contains all the projects I will be building during my cohort. These projects focus on building and enhancing web development skills.
 
 You can quickly navigate to any project by clicking on the links below:
 
