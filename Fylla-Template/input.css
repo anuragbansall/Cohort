@@ -11,3 +11,7 @@
 .theme-toggler {
   @apply w-[4rem] h-[2rem] border p-2 rounded-full cursor-pointer;
 }
+
+section {
+  @apply py-12;
+}
