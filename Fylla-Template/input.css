@@ -25,7 +25,7 @@ section .sub-heading {
 }
 
 .vision-card {
-  @apply pb-10 mb-10 border-b md:max-w-[20rem];
+  @apply pb-10 mb-10 border-b xl:max-w-[20rem];
 }
 
 .vision-card:nth-last-child(1) {
@@ -38,4 +38,20 @@ section .sub-heading {
 
 .vision-card p {
   @apply text-lg text-zinc-700;
+}
+
+.team-card {
+  @apply w-full;
+}
+
+.team-card .video-container {
+  @apply relative w-full h-auto rounded-2xl overflow-hidden mb-4 bg-zinc-200;
+}
+
+.team-card h3 {
+  @apply text-3xl font-semibold uppercase my-2;
+}
+
+.team-card h4 {
+  @apply text-xl uppercase;
 }
