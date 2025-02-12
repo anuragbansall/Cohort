@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+.primary-btn {
+  @apply bg-black text-[#FDFBF5] px-6 py-2 rounded-md uppercase cursor-pointer;
+}
+
+.social-btn {
+  @apply h-[2em] w-[2em] flex items-center justify-center uppercase rounded-full border cursor-pointer hover:bg-black hover:text-[#FDFBF5] duration-200;
+}
+
+.theme-toggler {
+  @apply w-[4rem] h-[2rem] border p-2 rounded-full cursor-pointer;
+}
