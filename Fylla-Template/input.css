@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .primary-btn {
-  @apply bg-black text-[#FDFBF5] px-6 py-2 rounded-md uppercase cursor-pointer;
+  @apply w-fit bg-black text-[#FDFBF5] px-6 py-2 rounded-md uppercase cursor-pointer;
 }
 
 .social-btn {
@@ -13,5 +13,29 @@
 }
 
 section {
-  @apply py-12;
+  @apply py-12 border-b mb-4;
+}
+
+section h2 {
+  @apply text-5xl md:text-7xl 2xl:text-8xl font-semibold;
+}
+
+section .sub-heading {
+  @apply text-xl 2xl:text-2xl font-normal uppercase;
+}
+
+.vision-card {
+  @apply pb-10 mb-10 border-b md:max-w-[20rem];
+}
+
+.vision-card:nth-last-child(1) {
+  @apply border-b-0 pb-0 mb-0;
+}
+
+.vision-card h3 {
+  @apply text-3xl font-semibold uppercase my-4;
+}
+
+.vision-card p {
+  @apply text-lg text-zinc-700;
 }
