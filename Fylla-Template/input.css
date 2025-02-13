@@ -67,3 +67,7 @@ section .sub-heading {
 .footer-column ul li a {
   @apply text-lg text-gray-600 hover:text-black duration-200 uppercase;
 }
+
+.aside-btn {
+  @apply bg-white px-4 py-2 text-sm font-semibold rounded-xl shadow-sm;
+}
