@@ -59,6 +59,7 @@ function findHCF(a, b) {
   let hcf = Math.max(...commonFactors);
 
   console.log(hcf);
+  return hcf;
 }
 
 function factors(num) {
@@ -326,3 +327,149 @@ function isNeonNumber(num) {
 
 isNeonNumber(9); // Neon Number
 isNeonNumber(10); // Not a Neon Number
+
+/*
+    11. Sum of Even Indexed Fibonacci Numbers
+
+    Description: Find the sum of Fibonacci numbers at even indices up to the 2Nth
+    Fibonacci number.
+
+    Example:
+    * Input: N = 4
+    * Output: 12
+
+    Hint: Use a loop and maintain a sum for even-indexed elements.
+*/
+
+function sumOfEvenIndexFibonacci(n) {
+  let a = 0;
+  let b = 1;
+  let sum = 0;
+
+  for (let i = 0; i < 2 * n; i++) {
+    if (i % 2 === 0) {
+      sum += a;
+    }
+
+    let temp = a;
+    a = b;
+    b = temp + b;
+  }
+
+  console.log(sum);
+}
+
+sumOfEvenIndexFibonacci(4); // 33
+
+/*
+    12. Find the Largest Digit in a Number
+
+    Description: Find the largest digit in a given number.
+
+    Example:
+    * Input: 54829
+    * Output: 9
+
+    Hint: Extract digits using modulo (% 10) and compare
+*/
+
+function findLargestDigit(num) {
+  let max = 0;
+
+  while (num > 0) {
+    let digit = num % 10;
+    max = Math.max(max, digit);
+    num = Math.floor(num / 10);
+  }
+
+  console.log(max);
+}
+
+findLargestDigit(54829); // 9
+
+/*
+    13. Find LCM of Two Numbers
+
+    Description: Find the Least Common Multiple (LCM) of two numbers.
+
+    Example:
+    * Input: a = 12, b = 1S
+    * Output: 60
+
+    Hint: LCM can be found using the formula: LCM(a, b) = (a × b) / GCD(a, b).
+*/
+
+function findLCM(a, b) {
+  let gcd = findHCF(a, b);
+  let lcm = (a * b) / gcd;
+
+  console.log(lcm);
+}
+
+findLCM(12, 18); // 36
+
+/*
+    14. Find the Sum of Even Digits in a Number
+
+    Description: Find the sum of all even digits in a given number.
+
+    Example5
+    * Input: 2382
+    * Output: 12
+
+    Hint: Extract digits using % 10, check if even (digit % 2 == 0), add to sum.
+*/
+
+function sumOfEvenDigits(num) {
+  let sum = 0;
+
+  while (num > 0) {
+    let digit = num % 10;
+    if (digit % 2 === 0) {
+      sum += digit;
+    }
+    num = Math.floor(num / 10);
+  }
+
+  console.log(sum);
+}
+
+sumOfEvenDigits(2382); // 12
+
+/*
+    15. Number of Days in a Month
+
+    Description: Find the number of days in a given month and year (to handle leap
+    years).
+
+    Example:
+    * Input: Month = 2, Year = 2024
+    * Output: 29
+
+    Hint: Use conditions:
+    * 31 Days: Jan, Mar, May, Jul, Aug, Oct, Dec.
+    * 30 Days: Apr, Jun, Sep, Nov.
+    * February: 28 or 29 (check for leap year using year % 4 == 0 but not year %
+    100 != 0 unless year % 400 == 0).
+*/
+
+function daysInMonth(month, year) {
+  const monthsWith31Days = [1, 3, 5, 7, 8, 10, 12];
+  const monthsWith30Days = [4, 6, 9, 11];
+
+  if (monthsWith30Days.includes(month)) {
+    console.log(30);
+  } else if (monthsWith31Days.includes(month)) {
+    console.log(31);
+  } else {
+    if (year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0)) {
+      console.log(29);
+    } else {
+      console.log(28);
+    }
+  }
+}
+
+daysInMonth(2, 2024); // 29
+daysInMonth(2, 2023); // 28
+daysInMonth(4, 2023); // 30
