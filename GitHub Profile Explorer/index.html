@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Profile Explorer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main id="home">
+      <section id="hero">
+        <h1>GitHub Profile Explorer</h1>
+        <p>
+          Enter a GitHub username to view their profile, contributions, and
+          repositories
+        </p>
+
+        <form id="search-form">
+          <div>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+              type="text"
+              placeholder="Enter GitHub username"
+              id="username-input"
+              required
+            />
+          </div>
+          <button type="submit" id="fetch-button">Search</button>
+        </form>
+      </section>
+
+      <section id="profile">
+        <div id="profile-header">
+          <!-- Profile Header Data -->
+        </div>
+
+        <div id="repositories">
+          <h2>Popular Repositories</h2>
+
+          <div id="repo-cards">
+            <!-- Repository Cards will be inserted here dynamically -->
+      </section>
+    </main>
+
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>
