@@ -7,7 +7,7 @@
 
 html,
 body {
-  height: 100%;
+  min-height: 100vh;
   width: 100%;
   color: #ffffff;
   background: linear-gradient(to bottom right, #000000, #1a1a1a, #000000);
@@ -148,4 +148,85 @@ main section#services .service-card .content:hover h2 {
 }
 main section#services .service-card .content:hover p {
   transform: translateY(0);
+}
+main section#task-management {
+  width: 100%;
+}
+main section#task-management form#task-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+main section#task-management form#task-form input#task-name {
+  padding: 1rem;
+  border: none;
+  border-bottom: 1px solid #d9d9d9;
+  background-color: transparent;
+  outline: none;
+  color: #d9d9d9;
+  width: 100%;
+  font-size: 2rem;
+}
+main section#task-management form#task-form button#add-task {
+  font-size: 1.5rem;
+  background-color: #1f1f1f;
+  color: #d9d9d9;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+}
+main section#task-management form#task-form button#add-task:hover {
+  background-color: #2f2f2f;
+}
+main section#task-management ul#task-list {
+  margin-top: 2rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+}
+main section#task-management ul#task-list li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background: linear-gradient(to bottom right, #1f1f1f, #1a1a1a, #1f1f1f);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+main section#task-management ul#task-list li:nth-child(odd) {
+  background: linear-gradient(to bottom right, #2f2f2f, #1a1a1a, #2f2f2f);
+}
+main section#task-management ul#task-list li p.task-name {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #d9d9d9;
+  margin-right: auto;
+}
+main section#task-management ul#task-list li button.delete-task,
+main section#task-management ul#task-list li button.complete-task {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #d9d9d9;
+  font-size: 1.25rem;
+  margin-right: 1rem;
+}
+main section#task-management ul#task-list li button.delete-task:hover,
+main section#task-management ul#task-list li button.complete-task:hover {
+  color: #ffffff;
+}
+main section#task-management ul#task-list li.completed {
+  background: linear-gradient(to bottom right, #1f1f1f, #1a1a1a, #1f1f1f);
+  text-decoration: line-through;
+  opacity: 0.5;
 }/*# sourceMappingURL=styles.css.map */
