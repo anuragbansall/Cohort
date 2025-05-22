@@ -1,19 +1,16 @@
-let dailyPlanner = [];
+const dailyPlanner = [];
+const storedPlanner = JSON.parse(localStorage.getItem("daily-planner")) || [];
 
-for (let i = 6; i <= 22; i++) {
+for (let i = 6; i <= 24; i++) {
   const hour = i % 12 === 0 ? 12 : i % 12;
   const ampm = i < 12 ? "AM" : "PM";
   const timeLabel = `${hour}:00 ${ampm}`;
 
   dailyPlanner.push({
     time: timeLabel,
-    task: "",
+    task: storedPlanner[i - 6]?.task || "",
   });
 }
-
-dailyPlanner = localStorage.getItem("daily-planner")
-  ? JSON.parse(localStorage.getItem("daily-planner"))
-  : dailyPlanner;
 
 const renderDailyPlannerCards = () => {
   const plannerContainer = document.querySelector(".planner-container");

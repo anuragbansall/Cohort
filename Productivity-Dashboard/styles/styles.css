@@ -256,6 +256,11 @@ main section#daily-planner .planner-container .planner-card {
   border-radius: 0.5rem;
   padding: 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+main section#daily-planner .planner-container .planner-card:hover {
+  filter: brightness(2);
 }
 main section#daily-planner .planner-container .time {
   font-size: 1.5rem;
