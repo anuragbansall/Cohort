@@ -161,14 +161,19 @@ main section#task-management form#task-form {
   justify-content: center;
 }
 main section#task-management form#task-form input#task-name {
+  position: relative;
   padding: 1rem;
   border: none;
-  border-bottom: 1px solid #d9d9d9;
+  border-bottom: 1px solid transparent;
   background-color: transparent;
   outline: none;
   color: #d9d9d9;
   width: 100%;
   font-size: 2rem;
+  transition: all 0.3s ease;
+}
+main section#task-management form#task-form input#task-name:focus {
+  border-bottom: 1px solid #d9d9d9;
 }
 main section#task-management form#task-form button#add-task {
   font-size: 1.5rem;
@@ -214,7 +219,9 @@ main section#task-management ul#task-list li p.task-name {
 }
 main section#task-management ul#task-list li button.delete-task,
 main section#task-management ul#task-list li button.complete-task {
-  background-color: transparent;
+  background-color: #1f1f1f;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
   border: none;
   cursor: pointer;
   color: #d9d9d9;
