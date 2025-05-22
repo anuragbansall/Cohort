@@ -82,18 +82,16 @@ main .section-title {
 }
 main section#services {
   width: 100%;
-  display: flex;
-  align-items: center;
   padding: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  max-width: 100%;
   gap: 2rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
 }
 main section#services .service-card {
   position: relative;
-  width: 18rem;
-  height: 20rem;
+  width: 100%;
+  aspect-ratio: 1/0.85;
   background-color: #d9d9d9;
   cursor: pointer;
   overflow: hidden;
