@@ -280,4 +280,44 @@ main section#daily-planner .planner-container .planner-input {
 }
 main section#daily-planner .planner-container .planner-input:focus {
   border-bottom: 1px solid #d9d9d9;
+}
+main section#motivation {
+  width: 100%;
+  height: calc(100vh - 10rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main section#motivation #motivation-container {
+  position: relative;
+  width: 100%;
+  max-width: 100rem;
+  display: none;
+  gap: 1rem;
+  padding: 2rem;
+  background-color: rgba(47, 47, 47, 0.1333333333);
+  border-radius: 1rem;
+}
+main section#motivation #motivation-container #quote-icon {
+  position: absolute;
+  top: 0;
+  left: 2%;
+  font-size: 5rem;
+  color: #2f2f2f;
+}
+main section#motivation #motivation-container #quote-container {
+  width: 100%;
+  margin-left: 5rem;
+}
+main section#motivation #motivation-container #quote-container #quote {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #b1b1b1;
+  margin-bottom: 1rem;
+}
+main section#motivation #motivation-container #quote-container #author {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #aeadad;
 }/*# sourceMappingURL=styles.css.map */
