@@ -41,7 +41,7 @@ header h1 span {
 }
 header ul {
   list-style: none;
-  display: flex;
+  display: none;
   gap: 1rem;
 }
 header ul li a {
@@ -55,13 +55,23 @@ header ul li a:hover {
   color: #ffffff;
   text-decoration: underline;
 }
+@media (min-width: 768px) {
+  header ul {
+    display: flex;
+  }
+}
 
 main {
   position: relative;
   width: 100%;
   max-width: 100rem;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  main {
+    padding: 2rem;
+  }
 }
 main a.go-home {
   text-decoration: none;
@@ -107,29 +117,52 @@ main section#hero .hero-content {
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   padding: 2rem;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  main section#hero .hero-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 main section#hero .hero-content #time-location-container #time-container {
-  font-size: 2rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: #ffffff;
   margin-bottom: 0.5rem;
 }
+@media (min-width: 768px) {
+  main section#hero .hero-content #time-location-container #time-container {
+    font-size: 2rem;
+  }
+}
 main section#hero .hero-content #time-location-container #location-container {
   display: flex;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 500;
   color: #d9d9d9;
   gap: 0.5rem;
 }
+@media (min-width: 768px) {
+  main section#hero .hero-content #time-location-container #location-container {
+    font-size: 1.5rem;
+  }
+}
 main section#hero .hero-content #weather-container h2#temperature {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 600;
   color: #ffffff;
   margin-bottom: 0.25rem;
+}
+@media (min-width: 768px) {
+  main section#hero .hero-content #weather-container h2#temperature {
+    font-size: 3rem;
+  }
 }
 main section#hero .hero-content #weather-container p {
   font-size: 1.2rem;
@@ -252,12 +285,14 @@ main section#task-management ul#task-list {
   flex-direction: column;
   gap: 1rem;
   width: 100%;
-  padding: 1rem;
 }
 main section#task-management ul#task-list li {
+  overflow: hidden;
   width: 100%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
   padding: 1rem;
   background: linear-gradient(to bottom right, #1f1f1f, #1a1a1a, #1f1f1f);
   border-radius: 0.5rem;
@@ -268,6 +303,12 @@ main section#task-management ul#task-list li {
 main section#task-management ul#task-list li:nth-child(odd) {
   background: linear-gradient(to bottom right, #2f2f2f, #1a1a1a, #2f2f2f);
 }
+@media (min-width: 768px) {
+  main section#task-management ul#task-list li {
+    flex-direction: row;
+    align-items: center;
+  }
+}
 main section#task-management ul#task-list li p.task-name {
   font-size: 1.5rem;
   font-weight: 500;
@@ -276,6 +317,7 @@ main section#task-management ul#task-list li p.task-name {
 }
 main section#task-management ul#task-list li button.delete-task,
 main section#task-management ul#task-list li button.complete-task {
+  width: 100%;
   background-color: #1f1f1f;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
@@ -284,10 +326,17 @@ main section#task-management ul#task-list li button.complete-task {
   color: #d9d9d9;
   font-size: 1.25rem;
   margin-right: 1rem;
+  transition: all 0.3s ease;
 }
 main section#task-management ul#task-list li button.delete-task:hover,
 main section#task-management ul#task-list li button.complete-task:hover {
   color: #ffffff;
+}
+@media (min-width: 768px) {
+  main section#task-management ul#task-list li button.delete-task,
+  main section#task-management ul#task-list li button.complete-task {
+    width: auto;
+  }
 }
 main section#task-management ul#task-list li.completed {
   background: linear-gradient(to bottom right, #1f1f1f, #1a1a1a, #1f1f1f);
@@ -303,9 +352,13 @@ main section#daily-planner .planner-container {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 1rem;
-  background-color: #1f1f1f;
   border-radius: 1rem;
+}
+@media (min-width: 768px) {
+  main section#daily-planner .planner-container {
+    padding: 1rem;
+    background-color: #1f1f1f;
+  }
 }
 main section#daily-planner .planner-container .planner-card {
   display: flex;
@@ -354,9 +407,14 @@ main section#motivation #motivation-container {
   max-width: 100rem;
   display: none;
   gap: 1rem;
-  padding: 2rem;
+  padding: 1rem;
   background-color: rgba(47, 47, 47, 0.1333333333);
   border-radius: 1rem;
+}
+@media (min-width: 768px) {
+  main section#motivation #motivation-container {
+    padding: 2rem;
+  }
 }
 main section#motivation #motivation-container #quote-icon {
   position: absolute;
@@ -364,10 +422,20 @@ main section#motivation #motivation-container #quote-icon {
   left: 2%;
   font-size: 5rem;
   color: #2f2f2f;
+  display: none;
+}
+@media (min-width: 768px) {
+  main section#motivation #motivation-container #quote-icon {
+    display: block;
+  }
 }
 main section#motivation #motivation-container #quote-container {
   width: 100%;
-  margin-left: 5rem;
+}
+@media (min-width: 768px) {
+  main section#motivation #motivation-container #quote-container {
+    margin-left: 5rem;
+  }
 }
 main section#motivation #motivation-container #quote-container #quote {
   font-size: 2rem;
@@ -389,26 +457,40 @@ main section#pomodoro-timer {
   align-items: center;
 }
 main section#pomodoro-timer #timer {
+  max-width: 100%;
+  width: 100%;
   position: relative;
-  aspect-ratio: 1/1;
   background-color: #1f1f1f;
   padding: 2rem;
-  border-radius: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 1rem;
+}
+@media (min-width: 768px) {
+  main section#pomodoro-timer #timer {
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    width: auto;
+  }
 }
 main section#pomodoro-timer #timer #led-indicator {
   position: absolute;
-  top: 10%;
-  right: 30%;
+  top: 5%;
+  right: 10%;
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%;
   background-color: #2f2f2f;
   box-shadow: 0 0 10px rgba(0, 0, 5, 0.5);
   z-index: 1;
+}
+@media (min-width: 768px) {
+  main section#pomodoro-timer #timer #led-indicator {
+    top: 10%;
+    right: 30%;
+  }
 }
 main section#pomodoro-timer #timer .timer-display {
   font-size: 5rem;
@@ -418,7 +500,13 @@ main section#pomodoro-timer #timer .timer-display {
 }
 main section#pomodoro-timer #timer .timer-controls {
   display: flex;
+  flex-direction: column;
   gap: 1rem;
+}
+@media (min-width: 768px) {
+  main section#pomodoro-timer #timer .timer-controls {
+    flex-direction: row;
+  }
 }
 main section#pomodoro-timer #timer .timer-controls button {
   background-color: #1f1f1f;
